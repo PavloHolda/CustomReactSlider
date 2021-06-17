@@ -1,0 +1,61 @@
+.slider{
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid rgba(128, 128, 128, 0.527);
+    position: relative;
+
+    .slides {
+        display: flex;
+        height: 100%;
+        position: relative;
+        left: 0;
+        transition: all 1s ease;
+    }
+
+    &:hover .btn-next{
+        right: 0;
+        transition: all .4s ease;
+    }
+
+    &:hover .btn-prev{
+        left: 0;
+        transition: all .4s ease;
+    }
+
+    &-item {
+        width: 1000px;
+        
+        img {
+            width: 100%;
+            height: -webkit-fill-available;
+            object-fit: cover;
+        }
+    }
+}
+
+.btn {
+    background: url(./img/arrow.png);
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    transition: all .4s ease;
+
+    &-next {
+        top: 45%;
+        right: -10%;
+    }
+
+    &-prev {
+        top: 45%;
+        left: -10%;
+        transform: rotate(180deg);
+    }
+}
+
+.dn {
+    display: none;
+}
