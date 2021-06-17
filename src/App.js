@@ -41,14 +41,12 @@ const App = () => {
     setInputValue(link);
 
   }
-// || (firstFourNumbers !== 'http' && lastThreeNumbers !== 'jpg') || (firstFourNumbers !== 'http' && lastThreeNumbers !== 'png')
-//  || lastThreeNumbers !== 'jpg' || lastThreeNumbers !== 'png')
+
   const addSlide = () => {
     
     if(inputValue === null) {
       return false
     } else {
-      let firstFourNumbers = inputValue.slice(0,4);
       let lastThreeNumbers = inputValue.slice(-3)
   
       if(inputValue.length === 0 || (!/[^\s]/.test(inputValue) || /^\s*$/.test(inputValue) || inputValue.replace(/\s/g,"") === "")){
@@ -112,7 +110,7 @@ const App = () => {
   });
 
   return (
-    <div className="App">
+    <div className="app">
         <div className={images.length < 1 ? 'dn' : 'slider'}>
           <div className='slides' style={{left: position +'px',...slides}}>
             {images}
